@@ -142,18 +142,20 @@ var Add = React.createClass({
                 <input
                     type='text'
                     className='add__author'
-                    onChange={this.onFieldChange.bind(this, 'authorIsEmpty')}
+
+                    onChange = {this.onAuthorChange}
                     placeholder='Ваше имя'
                     ref='author'
                     />
         <textarea
             className='add__text'
-            onChange={this.onTextChange}
+
+            onChange = {this.onTextChange}
             placeholder='Текст новости'
             ref='text'
             ></textarea>
                 <label className='add__checkrule'>
-                    <input type='checkbox' ref='checkrule' onChange={this.onFieldChange.bind(this, 'textIsEmpty')}/>Я согласен с правилами
+                    <input type='checkbox' ref='checkrule' onChange={this.onCheckRuleClick}/>Я согласен с правилами
                 </label>
 
                 <button
